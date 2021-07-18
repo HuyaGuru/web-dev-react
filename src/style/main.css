@@ -13,6 +13,9 @@ a {
     text-decoration: none;
     color: inherit;
 }
+ul {
+    list-style-type: none;
+}
 * {
     box-sizing: border-box;
 }
@@ -288,4 +291,25 @@ html {
     .nav-list {
         column-gap: 1.5rem;
     }
+}
+.contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 1rem;
+    width: 100vw;
+}
+.special-link {
+    text-decoration: underline;
+}
+.contact-li {
+    display: flex;
+    align-items: center;
+}
+.nav-contact {
+    display: flex;
+    justify-content: center;
+}
+.nav-contact-icon {
+    color: var(--text-color);
 }
