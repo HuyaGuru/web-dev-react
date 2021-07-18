@@ -23,7 +23,11 @@ const App = () => {
                                 <Link to="/contact">
                                     <p className="nav-contact">
                                         Contact &nbsp;{" "}
-                                        <img src={contactIcon} className="nav-contact-icon"></img>
+                                        <img
+                                            src={contactIcon}
+                                            className="nav-contact-icon"
+                                            alt="contact-icon"
+                                        ></img>
                                     </p>
                                 </Link>
                             </li>
