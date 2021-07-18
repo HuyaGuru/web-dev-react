@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import Home from "./Home"
+import Home from "./Home";
 
 import "../style/main.css";
-import image from "../images/lappy.jpg";
+// import image from "../images/lappy.jpg";
 
 const App = () => {
     return (
@@ -27,12 +27,8 @@ const App = () => {
                     </nav>
                 </div>
                 <Switch>
-                    <Route path="/what-is-this">
-                        what is this
-                    </Route>
-                    <Route path="/contact">
-                        contact
-                    </Route>
+                    <Route path="/what-is-this">what is this</Route>
+                    <Route path="/contact">contact</Route>
                     <Route path="/">
                         <Home />
                     </Route>
