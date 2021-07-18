@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 :root {
     color: var(--text-color);
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     letter-spacing: 0.09rem;
     --bg-color: white;
     --text-color: #262424;
@@ -36,18 +36,17 @@ html {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto auto;
     grid-template-areas:
-    "header header header header"
-    "center center center center"
-    "center center center center"
-    "footer footer footer footer";
+        "header header header header"
+        "center center center center"
+        "center center center center"
+        "footer footer footer footer";
 }
 .header {
     grid-area: header;
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(1, auto);
-    grid-template-areas:
-    "logo nav";
+    grid-template-areas: "logo nav";
     justify-content: center;
     align-items: center;
     grid-column-gap: 8rem;
@@ -82,7 +81,8 @@ html {
 .nav-list-item {
     cursor: pointer;
 }
-.nav-list-item:hover, .nav-list-item:focus {
+.nav-list-item:hover,
+.nav-list-item:focus {
     border-bottom: 0.15rem solid var(--text-color);
     animation-name: strike;
     animation-duration: 50ms;
@@ -114,10 +114,10 @@ html {
     background-color: rgba(185, 219, 48, 0.9);
 }
 .bg-blue {
-    background-color: #248ADB;
+    background-color: #248adb;
 }
 .bg-purple {
-    background-color: #7524DB;
+    background-color: #7524db;
 }
 .center {
     grid-area: center;
@@ -125,17 +125,18 @@ html {
     grid-template-columns: 1fr auto 1fr 1fr;
     grid-template-rows: 1fr auto auto 1fr;
     grid-template-areas:
-    ". . . right"
-    ". . . ."
-    "colors center-icon center-icon ."
-    "left . . .";
+        ". . . right"
+        ". . . ."
+        "colors center-icon center-icon ."
+        "left . . .";
     background-color: var(--bg-color);
     background-blend-mode: multiply;
     /* background-image: url('../images/lappy.jpg'); */
     background-size: cover;
     overflow: hidden;
 }
-.right, .left {
+.right,
+.left {
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -152,9 +153,9 @@ html {
 }
 .ultra-big {
     font-size: 7.2rem;
-    color:#262424;
+    color: #262424;
     -webkit-text-stroke-width: 0.08rem;
-    -webkit-text-stroke-color:#262424;
+    -webkit-text-stroke-color: #262424;
     z-index: 0;
     height: 7.2rem;
 }
@@ -169,8 +170,8 @@ html {
     grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(2, auto);
     grid-template-areas:
-    "text1"
-    "vertical";
+        "text1"
+        "vertical";
     font-size: 1.4rem;
     justify-content: center;
     align-items: center;
@@ -188,7 +189,6 @@ html {
     border: var(--text-color) 0.1rem solid;
     background-color: var(--text-color);
     color: var(--bg-color);
-
 }
 .vertical {
     grid-area: vertical;
@@ -202,7 +202,6 @@ html {
     height: max-content;
     padding: 0.45rem 0rem;
     transition: background-color 100ms ease;
-
 }
 .footer {
     grid-area: footer;
@@ -235,10 +234,16 @@ html {
     font-weight: 700;
     transition: background-color 100ms ease;
 }
-.text1, .vertical-item {
+.text1,
+.vertical-item {
     cursor: pointer;
 }
-.vertical-item:hover, .cta:hover, .vertical-item:active, .text1:active, .vertical-item:focus, .logo:hover {
+.vertical-item:hover,
+.cta:hover,
+.vertical-item:active,
+.text1:active,
+.vertical-item:focus,
+.logo:hover {
     color: var(--bg-color);
     background-color: var(--text-color);
 }
@@ -271,10 +276,13 @@ html {
     .header {
         column-gap: 3rem;
     }
-    .logo, .tag, .cta {
+    .logo,
+    .tag,
+    .cta {
         font-size: 1.8rem;
     }
-    .nav, .subtag {
+    .nav,
+    .subtag {
         font-size: 1.6rem;
     }
     .nav-list {
