@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+:root {
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.09rem;
+    --bg-color: white;
+    --text-color: #262424;
+}
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+html {
+    font-size: 16px;
+}
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.container {
+    display: grid;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 0rem 0rem;
+    background-color: var(--bg-color);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "header header header header"
+    "center center center center"
+    "center center center center"
+    "footer footer footer footer";
+}
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas:
+    "logo nav";
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 8rem;
+    z-index: 1;
+    height: 16vh;
+    padding-bottom: 1rem;
+}
+.logo {
+    grid-area: logo;
+    display: flex;
+    font-size: 1.6rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* background-color: rgba(185, 219, 48, 0.9); */
+    padding: 0rem 1rem;
+    border: var(--text-color) 0.1rem solid;
+}
+.nav {
+    grid-area: nav;
+    font-size: 1.4rem;
+    height: max-content;
+    width: max-content;
+}
+.nav-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    column-gap: 5rem;
+}
+.nav-list-item {
+    cursor: pointer;
+}
+.nav-list-item:hover, .nav-list-item:focus {
+    border-bottom: 0.15rem solid var(--text-color);
+    animation-name: strike;
+    animation-duration: 50ms;
+    color: var(--text-color);
+    background-color: #26242427;
+}
+@keyframes strike {
+    from {
+        border-width: 0.1rem;
+    }
+    to {
+        border-width: 0.15rem;
+    }
+}
+.colors {
+    padding-bottom: 1rem;
+    grid-area: colors;
+    display: flex;
+    justify-content: left;
+    writing-mode: vertical-lr;
+    z-index: 1;
+    padding-top: 1rem;
+}
+.color {
+    width: 1rem;
+    height: 1rem;
+}
+.bg-white {
+    background-color: rgba(185, 219, 48, 0.9);
+}
+.bg-blue {
+    background-color: #248ADB;
+}
+.bg-purple {
+    background-color: #7524DB;
+}
+.center {
+    grid-area: center;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr 1fr;
+    grid-template-rows: 1fr auto auto 1fr;
+    grid-template-areas:
+    ". . . right"
+    ". . . ."
+    "colors center-icon center-icon ."
+    "left . . .";
+    background-color: var(--bg-color);
+    background-blend-mode: multiply;
+    /* background-image: url('../images/lappy.jpg'); */
+    background-size: cover;
+    overflow: hidden;
+}
+.right, .left {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.right {
+    /* background-image: url('../images/Vector1.svg'); */
+    grid-area: right;
+    text-align: right;
+    vertical-align: top;
+}
+.left {
+    /* background-image: url('../images/Vector2.svg'); */
+    grid-area: left;
+    text-align: left;
+}
+.ultra-big {
+    font-size: 7.2rem;
+    color:#262424;
+    -webkit-text-stroke-width: 0.08rem;
+    -webkit-text-stroke-color:#262424;
+    z-index: 0;
+    height: 7.2rem;
+}
+.bl {
+    z-index: 1;
+    background-color: #262424;
+    grid-area: bl;
+}
+.center-icon {
+    grid-area: center-icon;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+    "text1"
+    "vertical";
+    font-size: 1.4rem;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    row-gap: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 1rem;
+    z-index: 1;
+}
+.text1 {
+    grid-area: text1;
+    text-align: center;
+    height: max-content;
+    border: var(--text-color) 0.1rem solid;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+
+}
+.vertical {
+    grid-area: vertical;
+    display: grid;
+    row-gap: 0.9rem;
+    writing-mode: vertical-lr;
+    height: max-content;
+}
+.vertical-item {
+    border: var(--text-color) 0.1rem solid;
+    height: max-content;
+    padding: 0.45rem 0rem;
+    transition: background-color 100ms ease;
+
+}
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(3, auto);
+    height: max-content;
+    row-gap: 1rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+.tag {
+    font-size: 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(2, auto);
+}
+.wave {
+    width: 60%;
+}
+.subtag {
+    font-size: 1.4rem;
+}
+.cta {
+    width: max-content;
+    justify-self: center;
+    border: var(--text-color) 0.1rem solid;
+    font-size: 1rem;
+    padding: 0.4rem 1.4rem;
+    font-weight: 700;
+    transition: background-color 100ms ease;
+}
+.text1, .vertical-item {
+    cursor: pointer;
+}
+.vertical-item:hover, .cta:hover, .vertical-item:active, .text1:active, .vertical-item:focus, .logo:hover {
+    color: var(--bg-color);
+    background-color: var(--text-color);
+}
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 9px;
+    }
+    .center-icon {
+        font-size: 2rem;
+    }
+    .color {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    .header {
+        column-gap: 3rem;
+    }
+    .logo, .tag, .cta {
+        font-size: 1.8rem;
+    }
+    .nav, .subtag {
+        font-size: 1.6rem;
+    }
+    .nav-list {
+        column-gap: 1.5rem;
+    }
+}
