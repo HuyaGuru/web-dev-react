@@ -19,7 +19,11 @@ const Contact = () => {
                 </li>
                 <br />
                 <li className="contact-li">
-                    <img src={linkedinIcon} className="li-img"></img>
+                    <img
+                        src={linkedinIcon}
+                        className="li-img"
+                        alt="linkedin-icon"
+                    ></img>
                     <b>:</b>&nbsp;
                     <a
                         className="special-link li-a"
