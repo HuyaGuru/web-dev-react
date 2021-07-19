@@ -5,6 +5,7 @@ import Contact from "./Contact";
 
 import "../style/main.css";
 import contactIcon from "../icons/contact_support_black_24dp.svg";
+import quizIcon from "../icons/quiz_black_24dp.svg"
 // import image from "../images/lappy.jpg";
 
 const App = () => {
@@ -22,11 +23,23 @@ const App = () => {
                             <li className="nav-list-item ">
                                 <Link to="/contact">
                                     <p className="nav-contact">
-                                        Contact &nbsp;{" "}
+                                        Contact &nbsp;
                                         <img
                                             src={contactIcon}
                                             className="nav-contact-icon"
                                             alt="contact-icon"
+                                        ></img>
+                                    </p>
+                                </Link>
+                            </li>
+                            <li className="nav-list-item ">
+                                <Link to="/faq">
+                                    <p className="nav-contact">
+                                        FAQs &nbsp;
+                                        <img
+                                            src={quizIcon}
+                                            className="nav-contact-icon"
+                                            alt="quiz-icon"
                                         ></img>
                                     </p>
                                 </Link>
@@ -37,6 +50,9 @@ const App = () => {
                 <Switch>
                     <Route path="/contact">
                         <Contact />
+                    </Route>
+                    <Route path="/faq">
+                        faq
                     </Route>
                     <Route path="/">
                         <Home />
