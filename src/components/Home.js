@@ -38,7 +38,10 @@ const Home = () => {
                     <div className="tag">
                         <b>Web Development Never Ends.</b>
                     </div>
-                    <span className="subtag">UI, Frontend & more!</span>
+                    <span className="subtag">
+                        UI, Frontend & more! by
+                        <i> Abhishek Shandilya</i>
+                    </span>
                     <span className="cta">Learn More!</span>
                 </div>
             </Router>

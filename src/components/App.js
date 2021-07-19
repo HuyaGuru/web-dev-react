@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Home from "./Home";
-import Contact from "./Contact";
+import Portfolio from "./Portfolio";
+import { Contact } from "./Portfolio";
 
 import "../style/main.css";
 import contactIcon from "../icons/contact_support_black_24dp.svg";
-import quizIcon from "../icons/quiz_black_24dp.svg"
-// import image from "../images/lappy.jpg";
+import portfolioIcon from "../icons/contact_page_black_24dp.svg";
 
 const App = () => {
     return (
@@ -15,32 +15,32 @@ const App = () => {
                 <div className="header">
                     <section className="logo">
                         <Link to="/">
-                            <b className="logo-text">Web Dev</b>
+                            <b className="logo-text">Home</b>
                         </Link>
                     </section>
                     <nav className="nav">
                         <ul className="nav-list list">
                             <li className="nav-list-item ">
-                                <Link to="/contact">
+                                <Link to="/portfolio">
                                     <p className="nav-contact">
-                                        Contact &nbsp;
                                         <img
-                                            src={contactIcon}
+                                            src={portfolioIcon}
                                             className="nav-contact-icon"
                                             alt="contact-icon"
-                                        ></img>
+                                        />
+                                        &nbsp; Portfolio
                                     </p>
                                 </Link>
                             </li>
                             <li className="nav-list-item ">
-                                <Link to="/faq">
+                                <Link to="/contact">
                                     <p className="nav-contact">
-                                        FAQs &nbsp;
                                         <img
-                                            src={quizIcon}
+                                            src={contactIcon}
                                             className="nav-contact-icon"
-                                            alt="quiz-icon"
-                                        ></img>
+                                            alt="contact-icon"
+                                        />
+                                        &nbsp; Contact
                                     </p>
                                 </Link>
                             </li>
@@ -48,11 +48,11 @@ const App = () => {
                     </nav>
                 </div>
                 <Switch>
+                    <Route path="/portfolio">
+                        <Portfolio />
+                    </Route>
                     <Route path="/contact">
                         <Contact />
-                    </Route>
-                    <Route path="/faq">
-                        faq
                     </Route>
                     <Route path="/">
                         <Home />

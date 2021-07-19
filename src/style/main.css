@@ -15,6 +15,8 @@ a {
 }
 ul {
     list-style-type: none;
+    padding: 0;
+    width: 100%;
 }
 * {
     box-sizing: border-box;
@@ -297,7 +299,7 @@ html {
     align-items: center;
     flex-direction: column;
     padding-left: 1rem;
-    width: 100vw;
+    width: 75%;
 }
 .special-link {
     text-decoration: underline;
@@ -312,4 +314,27 @@ html {
 }
 .nav-contact-icon {
     color: var(--text-color);
+}
+.portfolio {
+    width: 75%;
+}
+.fs-1-5 {
+    font-size: 1.5rem;
+}
+.fs-3 {
+    font-size: 3rem;
+}
+.light-text {
+    color: #2624248c;
+    font-size: 0.9rem;
+}
+.flex-container {
+    display: flex;
+    width: 100vw;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.hv-ul:hover {
+    border-bottom: solid 0.2rem;
 }
